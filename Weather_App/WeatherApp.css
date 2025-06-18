@@ -1,0 +1,16 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  margin-top: 100px;
+  background-image: url('https://mersingharbourcentre.com/weather1.webp');
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+}
+input {
+  padding: 10px;
+  width: 200px;
+}
+button {
+  padding: 10px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Google Map</title>
+  <style>
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">My Google Map App</h2>
+  <div id="map"></div>
+
+  <!-- Correct way to load the Google Maps API -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=8dd2e5ead3461dc8ad17ddf2677d8ded&callback=initMap"
+    async defer>
+  </script>
+
+  <!-- Your JavaScript logic goes separately here -->
+  <script>
+    function initMap() {
+      const location = { lat: 18.5204, lng: 73.8567 };
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: location,
+      });
+
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "Pune, Maharashtra"
+      });
+    }
+  </script>
+</body>
+</html>
